@@ -22,6 +22,4 @@ public class MailFileDTO {
         this.mailFileName = mailFileName;
         this.mailFileOriName = mailFileOriName;
     }
-
-
 }

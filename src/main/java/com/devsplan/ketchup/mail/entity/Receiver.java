@@ -2,13 +2,16 @@ package com.devsplan.ketchup.mail.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "tbl_receiver")
 @Getter
+@Setter
 @ToString
 public class Receiver {
     @Id
@@ -30,7 +33,7 @@ public class Receiver {
     @Column(name = "RECEIVER_DEL_STATUS", nullable = false)
     private char receiverDelStatus;
 
-    protected Receiver() {}
+    public Receiver() {}
 
     public Receiver(int receiverNo, int mailNo, int receiverMem, Timestamp readTime, char receiverDelStatus) {
         this.receiverNo = receiverNo;
@@ -39,5 +42,4 @@ public class Receiver {
         this.readTime = readTime;
         this.receiverDelStatus = receiverDelStatus;
     }
-
 }
